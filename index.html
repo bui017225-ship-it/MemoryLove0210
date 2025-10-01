@@ -99,13 +99,13 @@
 
     /* Slideshow */
     .slideshow {
-        width: 100%;
-        max-width: 600px;          /* giới hạn bề ngang trên mobile */
-        margin: 20px auto 0 auto;  /* căn giữa trên mọi màn hình */
-        overflow: hidden;
-        background: rgba(255,255,255,0.1);
-        border-radius: 10px;
-    }
+  width: 100%;
+  overflow-x: hidden;
+  background: rgba(255,255,255,0.1);
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;  /* ép dải hình sang lề phải */
+}
     .slide-track {
       display: flex;
       width: calc(200px * 14);
@@ -124,10 +124,10 @@
       object-fit: cover;
       border-radius: 10px;
     }
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+   @keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
 
     /* Timeline yêu */
     .love-counter {
@@ -305,6 +305,7 @@
   </script>
 </body>
 </html>
+
 
 
 
