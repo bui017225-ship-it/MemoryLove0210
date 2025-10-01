@@ -99,12 +99,12 @@
 
     /* Slideshow */
     .slideshow {
-      width: 100%;
-      overflow: hidden;
-      background: rgba(255,255,255,0.1);
-      margin-top: 20px;
-      display: flex;              /* thêm */
-      justify-content: flex-end;
+        width: 100%;
+        max-width: 600px;          /* giới hạn bề ngang trên mobile */
+        margin: 20px auto 0 auto;  /* căn giữa trên mọi màn hình */
+        overflow: hidden;
+        background: rgba(255,255,255,0.1);
+        border-radius: 10px;
     }
     .slide-track {
       display: flex;
@@ -304,4 +304,5 @@
   </script>
 </body>
 </html>
+
 
