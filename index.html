@@ -53,6 +53,7 @@
       max-width: 1200px;
       flex: 1;
       align-items: flex-start;
+      gap: 20px;
     }
 
     /* Trái tim ảnh */
@@ -82,7 +83,7 @@
     /* Lời ngỏ */
     .right {
       flex: 1;
-      padding: 50px;
+      padding: 30px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -106,12 +107,11 @@
     }
     .slide-track {
       display: flex;
-      width: calc(200px * 14);
       animation: scroll 30s linear infinite;
     }
     .slide {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
       margin: 5px;
       flex-shrink: 0;
     }
@@ -135,16 +135,17 @@
       font-size: 24px;
       margin: 30px 0;
       gap: 40px;
+      flex-wrap: wrap;
     }
     .love-counter .heart-shape {
       width: 60px;
       height: 60px;
     }
     .love-counter .days {
-      font-size: 32px;
+      font-size: 28px;
       font-weight: bold;
       color: #fff8b0;
-      min-width: 160px;
+      min-width: 140px;
       text-align: center;
     }
 
@@ -157,12 +158,52 @@
     .pulse {
       animation: pulse 1.5s infinite;
     }
+
+    /* 📱 Responsive cho Mobile */
+    @media (max-width: 768px) {
+      .title { font-size: 60px; }
+      .heart-icon { width: 30px; height: 30px; }
+
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .heart {
+        grid-template-columns: repeat(5, 60px);
+      }
+      .cell {
+        width: 60px;
+        height: 70px;
+      }
+
+      .right {
+        padding: 15px;
+        font-size: 16px;
+        text-align: center;
+      }
+      #message {
+        font-size: 28px;
+      }
+
+      .slide {
+        width: 140px;
+        height: 140px;
+      }
+
+      .love-counter {
+        gap: 20px;
+        font-size: 20px;
+      }
+      .love-counter .days {
+        font-size: 22px;
+      }
+    }
   </style>
 </head>
 <body>
   <!-- Tiêu đề có 2 trái tim -->
   <div class="title-container">
-    <!-- Trái tim trước T -->
     <svg class="heart-icon pulse" viewBox="0 0 32 29.6">
       <path d="M23.6,0c-3.5,0-6.6,2-8,5c-1.4-3-4.5-5-8-5C3.7,0,0,3.7,0,8.4
       c0,6.5,6.1,11.6,16,21.2C25.9,20,32,14.9,32,8.4C32,3.7,28.3,0,23.6,0z"
@@ -171,7 +212,6 @@
 
     <div class="title">T & S</div>
 
-    <!-- Trái tim sau S -->
     <svg class="heart-icon pulse" viewBox="0 0 32 29.6">
       <path d="M23.6,0c-3.5,0-6.6,2-8,5c-1.4-3-4.5-5-8-5C3.7,0,0,3.7,0,8.4
       c0,6.5,6.1,11.6,16,21.2C25.9,20,32,14.9,32,8.4C32,3.7,28.3,0,23.6,0z"
@@ -182,7 +222,6 @@
   <div class="container">
     <div class="left">
       <div class="heart">
-        <!-- Ảnh ghép trái tim -->
         <img class="cell" style="animation-delay:0.1s" src="anh1.jpg">
         <img class="cell" style="animation-delay:0.2s" src="anh2.jpg">
         <div></div><div></div><div></div>
@@ -243,7 +282,6 @@
     </div>
   </div>
 
-  <!-- Timeline yêu -->
   <div class="love-counter">
     <div>
       <svg class="heart-shape pulse" viewBox="0 0 32 29.6">
@@ -302,4 +340,3 @@
   </script>
 </body>
 </html>
-
